@@ -1,0 +1,29 @@
+{
+    "Lua.diagnostics.enable": true,
+    "Lua.diagnostics.globals": [
+        "ctx",
+        "ngx",
+        "log",
+        "vim"
+    ],
+    "Lua.workspace.maxPreload": 10000,
+    "clangd.disableDiagnostics": true,
+    "clangd.enabled": true,
+    "coc.preferences.diagnostic.displayByAle": true,
+    "go.enable": false,
+    "languageserver": {
+        "golang": {
+            "command": "gopls",
+            "filetypes": [
+                "go"
+            ],
+            "rootPatterns": [
+                "go.mod",
+                ".git/"
+            ]
+        }
+    },
+    "lua.enable": true,
+    "suggest.floatEnable": true,
+    "suggest.noselect": false
+}
