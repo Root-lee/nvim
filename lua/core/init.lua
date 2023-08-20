@@ -1,0 +1,34 @@
+-- basics init
+vim.cmd('syntax on')
+vim.cmd('filetype plugin indent on')
+vim.opt.number = true
+-- vim.opt.relativenumber = true
+vim.opt.termguicolors = true
+vim.opt.shiftround = true
+vim.opt.updatetime = 100
+vim.opt.cursorline = true
+vim.opt.autowrite = true
+if (vim.fn.has('termguicolors') == 1) then
+    vim.opt.termguicolors = true
+end
+
+-- tabs
+vim.opt.autoindent = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
+vim.opt.autowrite = false
+vim.opt.wrap = false
+vim.opt.formatoptions = ''
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+require("core.plugions")
+
+require("configs.nvim-tree").config()
+require("configs.nvim-treesitter").config()
+require("configs.symbols-outline").config()
+require("configs.toggleterm").config()
+
