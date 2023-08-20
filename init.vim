@@ -82,7 +82,7 @@ nnoremap <leader>sg <cmd>Telescope live_grep<cr>
 nnoremap <leader>sb <cmd>Telescope buffers<cr>
 nnoremap <leader>sh <cmd>Telescope help_tags<cr>
 
-autocmd BufEnter * if 0 == len(filter(range(1,winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt")) | qa! | endif
+autocmd BufEnter * if 0 == len(filter(range(1,winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
 
 " barbar tab 栏
 nnoremap <silent> <leader>tp <Cmd>BufferPrevious<CR>
@@ -128,7 +128,7 @@ nmap <silent> <leader>nt <cmd>Vista!!<cr>
 nmap <silent> <leader>nc <cmd>Vista ctags<cr>
 let g:vista_default_executive = 'ctags'
 let g:vista_executive_for = {
-        \ 'c'：'coc',
+        \ 'c': 'coc',
         \ 'go': 'coc',
         \ }
 let g:vista_sidebar_width = 35

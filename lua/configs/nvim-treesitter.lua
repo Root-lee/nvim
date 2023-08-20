@@ -26,7 +26,7 @@ function M.config()
     }
     -- 开启Folding
     vim.wo.foldmethod = 'expr'
-    vim.wo.foldexpr = 'nvim_treesitter#Foldexpr()
+    vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 
     vim.wo.foldlevel = 99
 end

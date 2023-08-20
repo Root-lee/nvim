@@ -25,7 +25,8 @@ vim.opt.formatoptions = ''
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require("core.plugions")
+require("configs.packer").config()
+require("core.plugins")
 
 require("configs.nvim-tree").config()
 require("configs.nvim-treesitter").config()
