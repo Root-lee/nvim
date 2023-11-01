@@ -24,5 +24,7 @@ return require('packer').startup(function(use)
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use {'akinsho/toggleterm.nvim', tag = '*'}
     use 'liuchengxu/vista.vim'
+    use 'f-person/git-blame.nvim'
+    use 'jose-elias-alvarez/null-ls.nvim'
 end
 )

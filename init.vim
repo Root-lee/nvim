@@ -5,7 +5,7 @@ set ignorecase
 " 若搜索内容中有大写字母，则不再忽略大小写
 set smartcase
 " 高亮第80列
-set colorcolumn=80
+"set colorcolumn=80
 " 高亮光标所在行
 set cursorline
 
@@ -76,6 +76,8 @@ nnoremap <c-p> :call fzf#Open()<cr>
 " MRU最近使用文件
 nnoremap <leader>f <cmd>MRU<cr>
 
+autocmd FileType go let b:go_fmt_options = {'goimports': '-local ' . trim(system('cd '. shellescape(expand('%:p:h')) .' && go list -m'))}
+
 " Telescope 查找文件
 nnoremap <leader>sf <cmd>Telescope find_files<cr>
 nnoremap <leader>sg <cmd>Telescope live_grep<cr>
@@ -100,6 +102,8 @@ nnoremap <silent> <leader>t9 <Cmd>BufferGoto 9<CR>
 nnoremap <silent> <leader>t0 <Cmd>BufferLast<CR>
 
 nnoremap <silent> <leader>tc <Cmd>BufferClose<CR>
+nnoremap <silent> <leader>to <Cmd>BufferCloseAllButCurrentOrPinned<CR>
+nnoremap <silent> <leader>ti <Cmd>BufferPin<CR>
 
 " 搜索高亮
 nnoremap <silent> <leader>k :call InterestingWords('n')<cr>
@@ -133,8 +137,8 @@ let g:vista_executive_for = {
         \ }
 let g:vista_sidebar_width = 35
 
+" git-blame
+nnoremap <silent> <leader>gb <cmd>GitBlameToggle<cr>
 
 lua require('core.init')
-
-set mouse = 
-set wrap
+set mouse =

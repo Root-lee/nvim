@@ -19,7 +19,7 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.autowrite = false
-vim.opt.wrap = false
+--vim.opt.wrap = false
 vim.opt.formatoptions = ''
 
 vim.g.loaded_netrw = 1
@@ -32,4 +32,6 @@ require("configs.nvim-tree").config()
 require("configs.nvim-treesitter").config()
 require("configs.symbols-outline").config()
 require("configs.toggleterm").config()
+require("configs.git-blame").config()
+require("configs.null-ls").config()
 
