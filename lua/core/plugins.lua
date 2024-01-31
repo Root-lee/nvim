@@ -20,7 +20,6 @@ return require('packer').startup(function(use)
         }
     }
     use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
-    use 'leisiji/interestingwords.nvim'
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use {'akinsho/toggleterm.nvim', tag = '*'}
     use 'liuchengxu/vista.vim'

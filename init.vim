@@ -76,8 +76,6 @@ nnoremap <c-p> :call fzf#Open()<cr>
 " MRU最近使用文件
 nnoremap <leader>f <cmd>MRU<cr>
 
-autocmd FileType go let b:go_fmt_options = {'goimports': '-local ' . trim(system('cd '. shellescape(expand('%:p:h')) .' && go list -m'))}
-
 " Telescope 查找文件
 nnoremap <leader>sf <cmd>Telescope find_files<cr>
 nnoremap <leader>sg <cmd>Telescope live_grep<cr>
