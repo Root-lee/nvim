@@ -24,11 +24,30 @@
         },
         "golangci-lint-languageserver": {
             "command": "golangci-lint-langserver",
-            "filetypes": ["go"],
+            "filetypes": [
+                "go"
+            ],
             "initializationOptions": {
-            "command": ["golangci-lint", "run", "--disable", "lll", "--out-format", "json", "--issues-exit-code=1"]
-      }
-    }
+                "command": [
+                    "golangci-lint",
+                    "run",
+                    "--disable",
+                    "lll",
+                    "--out-format",
+                    "json",
+                    "--issues-exit-code=1"
+                ]
+            }
+        },
+        "rust": {
+            "command": "rust-analyzer",
+            "rootPatterns": [
+                "Cargo.toml"
+            ],
+            "filetypes": [
+                "rust"
+            ]
+        }
     },
     "lua.enable": true,
     "suggest.floatEnable": true,
