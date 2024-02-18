@@ -1,0 +1,14 @@
+# for coc
+npm
+node
+
+# for coc golang
+golangci-lint
+golangci-lint-langserver
+
+# for telescope.nvim grep
+rgrep
+
+# for vista.vim
+universal-ctags
+

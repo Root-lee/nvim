@@ -34,4 +34,4 @@ require("configs.symbols-outline").config()
 require("configs.toggleterm").config()
 require("configs.git-blame").config()
 require("configs.null-ls").config()
-
+require("configs.bookmarks").config()

@@ -25,5 +25,6 @@ return require('packer').startup(function(use)
     use 'liuchengxu/vista.vim'
     use 'f-person/git-blame.nvim'
     use 'jose-elias-alvarez/null-ls.nvim'
+    use {'tomasky/bookmarks.nvim'}
 end
 )

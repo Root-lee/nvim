@@ -1,45 +1,45 @@
 [submodule "pack/vendor/start/fzf"]
 	path = pack/vendor/start/fzf
-	url = https://ghproxy.com/https://github.com/taoso/fzf.vim
+	url = https://github.com/taoso/fzf.vim
 [submodule "pack/vendor/start/tender"]
 	path = pack/vendor/start/tender
-	url = https://ghproxy.com/https://github.com/jacoborus/tender.vim
+	url = https://github.com/jacoborus/tender.vim
 [submodule "pack/vendor/start/nerdtree"]
 	path = pack/vendor/start/nerdtree
-	url = https://ghproxy.com/https://github.com/scrooloose/nerdtree
+	url = https://github.com/scrooloose/nerdtree
 [submodule "pack/vendor/start/nerdtree-git"]
 	path = pack/vendor/start/nerdtree-git
-	url = https://ghproxy.com/https://github.com/Xuyuanp/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin
 [submodule "pack/vendor/start/vim-airline"]
 	path = pack/vendor/start/vim-airline
-	url = https://ghproxy.com/https://github.com/vim-airline/vim-airline
+	url = https://github.com/vim-airline/vim-airline
 [submodule "pack/vendor/start/vim-airline-themes"]
 	path = pack/vendor/start/vim-airline-themes
-	url = https://ghproxy.com/https://github.com/vim-airline/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "pack/vendor/start/tagbar"]
 	path = pack/vendor/start/tagbar
-	url = https://ghproxy.com/https://github.com/majutsushi/tagbar
+	url = https://github.com/majutsushi/tagbar
 [submodule "pack/vendor/start/vim-go"]
 	path = pack/vendor/start/vim-go
-	url = https://ghproxy.com/https://github.com/fatih/vim-go
+	url = https://github.com/fatih/vim-go
 [submodule "pack/vendor/start/vim-startify"]
 	path = pack/vendor/start/vim-startify
-	url = https://ghproxy.com/https://github.com/mhinz/vim-startify
+	url = https://github.com/mhinz/vim-startify
 [submodule "pack/vendor/start/coc.nvim"]
 	path = pack/vendor/start/coc.nvim
-	url = https://ghproxy.com/https://github.com/neoclide/coc.nvim
+	url = https://github.com/neoclide/coc.nvim
 [submodule "pack/vendor/start/vim-easymotion"]
 	path = pack/vendor/start/vim-easymotion
-	url = https://ghproxy.com/https://github.com/easymotion/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion
 [submodule "pack/vendor/start/auto-pairs"]
 	path = pack/vendor/start/auto-pairs
-	url = https://ghproxy.com/https://github.com/jiangmiao/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
 [submodule "pack/vendor/start/ag"]
 	path = pack/vendor/start/ag
-	url = https://ghproxy.com/https://github.com/taoso/ag.vim
+	url = https://github.com/taoso/ag.vim
 [submodule "pack/vendor/start/mru"]
 	path = pack/vendor/start/mru
-	url = https://ghproxy.com/https://github.com/yegappan/mru
+	url = https://github.com/yegappan/mru
 [submodule "pack/vendor/start/vim-interestingwords"]
 	path = pack/vendor/start/vim-interestingwords
-	url = https://ghproxy.com/https://github.com/lfv89/vim-interestingwords
+	url = https://github.com/lfv89/vim-interestingwords

@@ -80,7 +80,7 @@ nnoremap <leader>f <cmd>MRU<cr>
 nnoremap <leader>sf <cmd>Telescope find_files<cr>
 nnoremap <leader>sg <cmd>Telescope live_grep<cr>
 nnoremap <leader>sb <cmd>Telescope buffers<cr>
-nnoremap <leader>sh <cmd>Telescope help_tags<cr>
+nnoremap <leader>sm <cmd>Telescope bookmarks list<cr>
 
 autocmd BufEnter * if 0 == len(filter(range(1,winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
 
