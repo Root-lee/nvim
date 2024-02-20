@@ -74,8 +74,8 @@ nnoremap <silent> <leader>ep :call CocAction('diagnosticPrevious')<cr>
 " json format
 nnoremap <silent> <leader>mg <cmd>CocCommand formatJson<cr>
 
-" vim-easymotion
-nmap ss <Plug>(easymotion-s2)
+" hop.nvim
+nnoremap <leader>ss :HopChar2<cr>
 
 " fzf
 nnoremap <c-p> :call fzf#Open()<cr>

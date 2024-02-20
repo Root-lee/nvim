@@ -1,21 +1,9 @@
 [submodule "pack/vendor/start/tender"]
 	path = pack/vendor/start/tender
 	url = https://github.com/jacoborus/tender.vim
-[submodule "pack/vendor/start/nerdtree"]
-	path = pack/vendor/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree
-[submodule "pack/vendor/start/nerdtree-git"]
-	path = pack/vendor/start/nerdtree-git
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin
-[submodule "pack/vendor/start/vim-startify"]
-	path = pack/vendor/start/vim-startify
-	url = https://github.com/mhinz/vim-startify
 [submodule "pack/vendor/start/coc.nvim"]
 	path = pack/vendor/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim
-[submodule "pack/vendor/start/vim-easymotion"]
-	path = pack/vendor/start/vim-easymotion
-	url = https://github.com/easymotion/vim-easymotion
 [submodule "pack/vendor/start/auto-pairs"]
 	path = pack/vendor/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
