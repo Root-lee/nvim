@@ -26,5 +26,10 @@ return require('packer').startup(function(use)
     use 'f-person/git-blame.nvim'
     use 'jose-elias-alvarez/null-ls.nvim'
     use {'tomasky/bookmarks.nvim'}
+    use({
+	    'mvllow/modes.nvim',
+	    tag = 'v0.2.0',
+    })
+    use 'Root-lee/zoo.nvim'
 end
 )

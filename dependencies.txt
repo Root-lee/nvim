@@ -12,3 +12,7 @@ rgrep
 # for vista.vim
 universal-ctags
 
+# submodule for viml plugins
+git submodule init
+git submodule update
+

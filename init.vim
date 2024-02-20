@@ -49,8 +49,10 @@ autocmd ColorScheme tender
 
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-nnoremap <leader>nn :NERDTreeToggle<cr>
-nnoremap <leader>nf :NERDTreeFind<cr>
+" nnoremap <leader>nn :NERDTreeToggle<cr>
+" nnoremap <leader>nf :NERDTreeFind<cr>
+nnoremap <leader>nn :NvimTreeToggle<cr>
+nnoremap <leader>nf :NvimTreeFindFile<cr>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NvimTree_1") ) | q | endif
 
 let g:go_highlight_types = 1
@@ -65,7 +67,15 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gm <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent><c-]> <Plug>(coc-definition)
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" jump to next diagnostic
+nnoremap <silent> <leader>en :call CocAction('diagnosticNext')<cr>
+nnoremap <silent> <leader>ep :call CocAction('diagnosticPrevious')<cr>
+
+" json format
+nnoremap <silent> <leader>mg <cmd>CocCommand formatJson<cr>
 
 " vim-easymotion
 nmap ss <Plug>(easymotion-s2)
@@ -112,17 +122,11 @@ let g:interestingWordsGUIColors = ["#8CCBEA", "#A4E57E", "#FFDB72", "#FF7272", "
 nnoremap <silent> n :call WordNavigation(1)<cr>
 nnoremap <silent> N :call WordNavigation(0)<cr>
 
-" json format
-nnoremap <silent> <leader>mg <cmd>CocCommand formatJson<cr>
-
+" ToggleTerm
 autocmd TermEnter term://*toggleterm#*
             \ tnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
 nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
 inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
-
-" jump to next diagnostic
-nnoremap <silent> <leader>en :call CocAction('diagnosticNext')<cr>
-nnoremap <silent> <leader>ep :call CocAction('diagnosticPrevious')<cr>
 
 
 " Vista函数列表
