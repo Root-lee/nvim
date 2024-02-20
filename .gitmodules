@@ -16,9 +16,6 @@
 [submodule "pack/vendor/start/vim-airline-themes"]
 	path = pack/vendor/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
-[submodule "pack/vendor/start/tagbar"]
-	path = pack/vendor/start/tagbar
-	url = https://github.com/majutsushi/tagbar
 [submodule "pack/vendor/start/vim-startify"]
 	path = pack/vendor/start/vim-startify
 	url = https://github.com/mhinz/vim-startify
@@ -31,9 +28,6 @@
 [submodule "pack/vendor/start/auto-pairs"]
 	path = pack/vendor/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
-[submodule "pack/vendor/start/ag"]
-	path = pack/vendor/start/ag
-	url = https://github.com/taoso/ag.vim
 [submodule "pack/vendor/start/mru"]
 	path = pack/vendor/start/mru
 	url = https://github.com/yegappan/mru
