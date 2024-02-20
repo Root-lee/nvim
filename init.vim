@@ -31,9 +31,6 @@ au! BufNewFile,BufRead *.conf,*.ini setf toml
 
 " 状态栏
 set laststatus=2
-" 状态栏格式
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Colume:\ %c
-
 
 autocmd BufReadPost *
       \ if line("'\"") >= 1 && line("'\"") <= line("$")
