@@ -28,8 +28,11 @@ vim.g.loaded_netrwPlugin = 1
 require("configs.packer").config()
 require("core.plugins")
 
-require("configs.nvim-tree").config()
+require("configs.mason").config()
+require("configs.mason-lspconfig").config()
 require("configs.lspconfig").config()
+
+require("configs.nvim-tree").config()
 require("configs.nvim-treesitter").config()
 require("configs.symbols-outline").config()
 require("configs.toggleterm").config()
@@ -41,3 +44,4 @@ require("configs.zoo").config()
 require("configs.lualine").config()
 require("configs.alpha-nvim").config()
 require("configs.hop").config()
+require("configs.nvim-cmp").config()

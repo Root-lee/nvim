@@ -59,20 +59,15 @@ let g:go_highlight_function_calls = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
 
-" coc.nvim
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gm <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nnoremap <silent><c-]> <Plug>(coc-definition)
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" lsp keymap
+nmap <silent> gd :lua vim.lsp.buf.definition()<cr>
+nmap <silent> gm :lua vim.lsp.buf.implementation()<cr>
+nmap <silent> gr :lua vim.lsp.buf.references()<cr>
+nnoremap <silent><c-]> :lua vim.lsp.buf.definition()<cr>
 
 " jump to next diagnostic
-nnoremap <silent> <leader>en :call CocAction('diagnosticNext')<cr>
-nnoremap <silent> <leader>ep :call CocAction('diagnosticPrevious')<cr>
-
-" json format
-nnoremap <silent> <leader>mg <cmd>CocCommand formatJson<cr>
+nnoremap <silent> <leader>en :lua vim.diagnostic.goto_next()<cr>
+nnoremap <silent> <leader>ep :lua vim.diagnostic.goto_prev()<cr>
 
 " hop.nvim
 nnoremap <leader>ss :HopChar2<cr>
@@ -131,8 +126,8 @@ nmap <silent> <leader>nt <cmd>Vista!!<cr>
 nmap <silent> <leader>nc <cmd>Vista ctags<cr>
 let g:vista_default_executive = 'ctags'
 let g:vista_executive_for = {
-        \ 'c': 'coc',
-        \ 'go': 'coc',
+        \ 'c': 'nvim_lsp',
+        \ 'go': 'nvim_lsp',
         \ }
 let g:vista_sidebar_width = 35
 

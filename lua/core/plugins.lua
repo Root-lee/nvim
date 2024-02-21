@@ -1,4 +1,3 @@
-
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
@@ -19,16 +18,16 @@ return require('packer').startup(function(use)
             'BurntSushi/ripgrep',
         }
     }
-    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    use {'akinsho/toggleterm.nvim', tag = '*'}
+    use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use { 'akinsho/toggleterm.nvim', tag = '*' }
     use 'liuchengxu/vista.vim'
     use 'f-person/git-blame.nvim'
     use 'jose-elias-alvarez/null-ls.nvim'
-    use {'tomasky/bookmarks.nvim'}
+    use { 'tomasky/bookmarks.nvim' }
     use({
-	    'mvllow/modes.nvim',
-	    tag = 'v0.2.0',
+        'mvllow/modes.nvim',
+        tag = 'v0.2.0',
     })
     use 'Root-lee/zoo.nvim'
     use {
@@ -40,5 +39,18 @@ return require('packer').startup(function(use)
         'phaazon/hop.nvim',
         branch = 'v2', -- optional but strongly recommended
     }
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
+    use({
+        'nvimdev/lspsaga.nvim',
+        after = 'nvim-lspconfig',
+    })
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-vsnip'
+    use 'hrsh7th/vim-vsnip'
 end
 )
