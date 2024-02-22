@@ -15,6 +15,7 @@ function M.config()
             }
         }
     }
+    require 'lspconfig'.golangci_lint_ls.setup {}
 end
 
 return M

@@ -45,6 +45,8 @@ return require('packer').startup(function(use)
         'nvimdev/lspsaga.nvim',
         after = 'nvim-lspconfig',
     })
+    use 'Mr-LLLLL/interestingwords.nvim'
+
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'

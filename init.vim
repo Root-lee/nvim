@@ -105,15 +105,6 @@ nnoremap <silent> <leader>tc <Cmd>BufferClose<CR>
 nnoremap <silent> <leader>to <Cmd>BufferCloseAllButCurrentOrPinned<CR>
 nnoremap <silent> <leader>ti <Cmd>BufferPin<CR>
 
-" 搜索高亮
-nnoremap <silent> <leader>k :call InterestingWords('n')<cr>
-nnoremap <silent> <leader>k :call InterestingWords('v')<cr>
-nnoremap <silent> <leader>K :call UncolorAllWords()<cr>
-let g:interestingWordsGUIColors = ["#8CCBEA", "#A4E57E", "#FFDB72", "#FF7272", "#FFB3FF", "#9999FF"]
-
-nnoremap <silent> n :call WordNavigation(1)<cr>
-nnoremap <silent> N :call WordNavigation(0)<cr>
-
 " ToggleTerm
 autocmd TermEnter term://*toggleterm#*
             \ tnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>

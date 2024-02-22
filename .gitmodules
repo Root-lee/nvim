@@ -7,6 +7,3 @@
 [submodule "pack/vendor/start/mru"]
 	path = pack/vendor/start/mru
 	url = https://github.com/yegappan/mru
-[submodule "pack/vendor/start/vim-interestingwords"]
-	path = pack/vendor/start/vim-interestingwords
-	url = https://github.com/lfv89/vim-interestingwords
