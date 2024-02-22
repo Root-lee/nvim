@@ -46,6 +46,9 @@ return require('packer').startup(function(use)
         after = 'nvim-lspconfig',
     })
     use 'Mr-LLLLL/interestingwords.nvim'
+    use 'jacoborus/tender.vim'
+    use 'yegappan/mru'
+    use 'jiangmiao/auto-pairs'
 
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'

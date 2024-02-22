@@ -1,9 +1,0 @@
-[submodule "pack/vendor/start/tender"]
-	path = pack/vendor/start/tender
-	url = https://github.com/jacoborus/tender.vim
-[submodule "pack/vendor/start/auto-pairs"]
-	path = pack/vendor/start/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs
-[submodule "pack/vendor/start/mru"]
-	path = pack/vendor/start/mru
-	url = https://github.com/yegappan/mru

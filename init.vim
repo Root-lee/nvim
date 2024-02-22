@@ -38,7 +38,7 @@ autocmd BufReadPost *
       \ | endif
 
 color tender
-" 此处对 tender 主题略做调整，大家可以去掉对比一下效果
+"" 此处对 tender 主题略做调整，大家可以去掉对比一下效果
 autocmd ColorScheme tender
 \ | hi Normal guibg=#000000
 \ | hi SignColumn guibg=#000000 "
