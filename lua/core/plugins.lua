@@ -6,13 +6,12 @@ return require('packer').startup(function(use)
         'nvim-tree/nvim-tree.lua',
         requires = {
             'nvim-tree/nvim-web-devicons',
-        },
-        tag = 'nightly'
+        }
     }
     use 'simrat39/symbols-outline.nvim'
     use 'neovim/nvim-lspconfig'
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim', tag = '0.1.5',
         requires = {
             'nvim-lua/plenary.nvim',
             'BurntSushi/ripgrep',
@@ -41,10 +40,7 @@ return require('packer').startup(function(use)
     }
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
-    use({
-        'nvimdev/lspsaga.nvim',
-        after = 'nvim-lspconfig',
-    })
+    use 'nvimdev/lspsaga.nvim'
     use 'Mr-LLLLL/interestingwords.nvim'
     use 'jacoborus/tender.vim'
     use 'yegappan/mru'

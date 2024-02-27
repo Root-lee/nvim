@@ -50,7 +50,7 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 " nnoremap <leader>nf :NERDTreeFind<cr>
 nnoremap <leader>nn :NvimTreeToggle<cr>
 nnoremap <leader>nf :NvimTreeFindFile<cr>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NvimTree_1") ) | q | endif
+autocmd BufEnter * if ((winnr("$") <= 2) && 0 == len(filter(range(1,winnr('$')), 'bufname(winbufnr(v:val)) != "NvimTree_1" && bufname(winbufnr(v:val)) != "__vista__"'))) | qa! | endif
 
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
@@ -60,14 +60,21 @@ let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
 
 " lsp keymap
-nmap <silent> gd :lua vim.lsp.buf.definition()<cr>
-nmap <silent> gm :lua vim.lsp.buf.implementation()<cr>
-nmap <silent> gr :lua vim.lsp.buf.references()<cr>
-nnoremap <silent><c-]> :lua vim.lsp.buf.definition()<cr>
+" nmap <silent> gd :lua vim.lsp.buf.definition()<cr>
+" nmap <silent> gm :lua vim.lsp.buf.implementation()<cr>
+" nmap <silent> gr :lua vim.lsp.buf.references()<cr>
+" nnoremap <silent><c-]> :lua vim.lsp.buf.definition()<cr>
+
+nmap <silent> gd :Lspsaga peek_definition<cr>
+nmap <silent> gi :Lspsaga finder<cr>
+nmap <silent> gr :Lspsaga finder<cr>
+nnoremap <silent><c-]> :Lspsaga goto_definition<cr>
 
 " jump to next diagnostic
-nnoremap <silent> <leader>en :lua vim.diagnostic.goto_next()<cr>
-nnoremap <silent> <leader>ep :lua vim.diagnostic.goto_prev()<cr>
+"nnoremap <silent> <leader>en :lua vim.diagnostic.goto_next()<cr>
+"nnoremap <silent> <leader>ep :lua vim.diagnostic.goto_prev()<cr>
+nnoremap <silent> <leader>en :Lspsaga diagnostic_jump_next<cr>
+nnoremap <silent> <leader>ep :Lspsaga diagnostic_jump_prev<cr>
 
 " hop.nvim
 nnoremap <leader>ss :HopChar2<cr>
@@ -83,8 +90,6 @@ nnoremap <leader>sf <cmd>Telescope find_files<cr>
 nnoremap <leader>sg <cmd>Telescope live_grep<cr>
 nnoremap <leader>sb <cmd>Telescope buffers<cr>
 nnoremap <leader>sm <cmd>Telescope bookmarks list<cr>
-
-autocmd BufEnter * if 0 == len(filter(range(1,winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
 
 " barbar tab 栏
 nnoremap <silent> <leader>tp <Cmd>BufferPrevious<CR>
