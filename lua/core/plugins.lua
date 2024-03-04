@@ -2,6 +2,14 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
+    -- color
+    use 'tanvirtin/monokai.nvim'
+    use 'jacoborus/tender.vim'
+    use 'folke/tokyonight.nvim'
+    use 'rebelot/kanagawa.nvim'
+    use 'catppuccin/nvim'
+    use 'sainnhe/everforest'
+
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -18,7 +26,7 @@ return require('packer').startup(function(use)
         }
     }
     use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use { 'nvim-treesitter/nvim-treesitter' }
     use { 'akinsho/toggleterm.nvim', tag = '*' }
     use 'liuchengxu/vista.vim'
     use 'f-person/git-blame.nvim'
@@ -41,8 +49,7 @@ return require('packer').startup(function(use)
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
     use 'nvimdev/lspsaga.nvim'
-    use 'Mr-LLLLL/interestingwords.nvim'
-    use 'jacoborus/tender.vim'
+    use 'Root-lee/interestingwords.nvim'
     use 'yegappan/mru'
     use 'jiangmiao/auto-pairs'
 
@@ -53,5 +60,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-vsnip'
     use 'hrsh7th/vim-vsnip'
+
+    use 'voldikss/vim-translator'
 end
 )

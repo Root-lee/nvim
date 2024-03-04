@@ -37,8 +37,13 @@ autocmd BufReadPost *
       \ |   exe "normal! g`\""
       \ | endif
 
-color tender
-"" 此处对 tender 主题略做调整，大家可以去掉对比一下效果
+"colorscheme tender
+colorscheme everforest
+"colorscheme tokyonight
+"colorscheme kanagawa
+"colorscheme monokai
+"colorscheme catppuccin
+" 此处对 tender 主题略做调整，大家可以去掉对比一下效果
 autocmd ColorScheme tender
 \ | hi Normal guibg=#000000
 \ | hi SignColumn guibg=#000000 "
@@ -58,6 +63,11 @@ let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
+
+" Translate
+let g:translator_default_engines = ['bing']
+nmap <silent> <Leader>tr <Plug>TranslateW
+vmap <silent> <Leader>tr <Plug>TranslateWV
 
 " lsp keymap
 " nmap <silent> gd :lua vim.lsp.buf.definition()<cr>
