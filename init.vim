@@ -37,17 +37,11 @@ autocmd BufReadPost *
       \ |   exe "normal! g`\""
       \ | endif
 
-"colorscheme tender
 colorscheme everforest
 "colorscheme tokyonight
 "colorscheme kanagawa
 "colorscheme monokai
 "colorscheme catppuccin
-" 此处对 tender 主题略做调整，大家可以去掉对比一下效果
-autocmd ColorScheme tender
-\ | hi Normal guibg=#000000
-\ | hi SignColumn guibg=#000000 "
-\ | hi StatusLine guibg=#444444 guifg=#b3deef
 
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
@@ -56,13 +50,6 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 nnoremap <leader>nn :NvimTreeToggle<cr>
 nnoremap <leader>nf :NvimTreeFindFile<cr>
 autocmd BufEnter * if ((winnr("$") <= 2) && 0 == len(filter(range(1,winnr('$')), 'bufname(winbufnr(v:val)) != "NvimTree_1" && bufname(winbufnr(v:val)) != "__vista__"'))) | qa! | endif
-
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_generate_tags = 1
 
 " Translate
 let g:translator_default_engines = ['bing']
@@ -87,6 +74,7 @@ nnoremap <silent> <leader>en :Lspsaga diagnostic_jump_next<cr>
 nnoremap <silent> <leader>ep :Lspsaga diagnostic_jump_prev<cr>
 
 " hop.nvim
+nnoremap <leader>sw :HopWord<cr>
 nnoremap <leader>ss :HopChar2<cr>
 
 " fzf
@@ -134,11 +122,17 @@ let g:vista_default_executive = 'ctags'
 let g:vista_executive_for = {
         \ 'c': 'nvim_lsp',
         \ 'go': 'nvim_lsp',
+        \ 'lua': 'nvim_lsp',
         \ }
 let g:vista_sidebar_width = 35
 
 " git-blame
 nnoremap <silent> <leader>gb <cmd>GitBlameToggle<cr>
+
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+set nofoldenable                     " Disable folding at startup.
+set foldlevel=9999
 
 lua require('core.init')
 set mouse =

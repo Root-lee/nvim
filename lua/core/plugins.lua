@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
         }
     }
     use 'simrat39/symbols-outline.nvim'
+    use { 'nvim-treesitter/nvim-treesitter' }
     use 'neovim/nvim-lspconfig'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
@@ -26,7 +27,6 @@ return require('packer').startup(function(use)
         }
     }
     use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
-    use { 'nvim-treesitter/nvim-treesitter' }
     use { 'akinsho/toggleterm.nvim', tag = '*' }
     use 'liuchengxu/vista.vim'
     use 'f-person/git-blame.nvim'
@@ -62,5 +62,6 @@ return require('packer').startup(function(use)
     use 'hrsh7th/vim-vsnip'
 
     use 'voldikss/vim-translator'
+    use 'lewis6991/gitsigns.nvim'
 end
 )

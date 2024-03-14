@@ -1,18 +1,16 @@
-# for coc
-npm
-node
+# packer install
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-# for coc golang
-golangci-lint
+# for lsp 
 golangci-lint-langserver
+gopls
+
+# for null-ls
+gofmt
+goimports
 
 # for telescope.nvim grep
 rgrep
 
 # for vista.vim
 universal-ctags
-
-# submodule for viml plugins
-git submodule init
-git submodule update
-
