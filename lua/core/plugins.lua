@@ -3,12 +3,16 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     -- color
+    use 'byounghoonkim/random-colorscheme.nvim'
     use 'tanvirtin/monokai.nvim'
     use 'jacoborus/tender.vim'
     use 'folke/tokyonight.nvim'
     use 'rebelot/kanagawa.nvim'
     use 'catppuccin/nvim'
     use 'sainnhe/everforest'
+    use 'Lokaltog/vim-monotone'
+    use 'chriskempson/base16-vim'
+    use 'sainnhe/gruvbox-material'
 
     use {
         'nvim-tree/nvim-tree.lua',

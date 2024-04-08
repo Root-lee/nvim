@@ -37,11 +37,23 @@ autocmd BufReadPost *
       \ |   exe "normal! g`\""
       \ | endif
 
+" ---colorful color---
 colorscheme everforest
 "colorscheme tokyonight
 "colorscheme kanagawa
 "colorscheme monokai
 "colorscheme catppuccin
+"colorscheme base16-ashes
+"colorscheme base16-ocean
+"colorscheme gruvbox-material
+
+" ---grey color---
+"colorscheme monotone
+"colorscheme base16-grayscale-dark
+
+"change color
+map <leader>cp :RandomColorscheme prev<cr>
+map <leader>cn :RandomColorscheme next<cr>
 
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
