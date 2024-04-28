@@ -1,3 +1,6 @@
+# git version
+git 2.31.0
+
 # packer install
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
@@ -13,7 +16,7 @@ gofmt
 goimports
 
 # for telescope.nvim grep
-rgrep
+ripgrep
 
 # for vista.vim
 universal-ctags

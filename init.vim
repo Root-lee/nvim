@@ -140,6 +140,9 @@ let g:vista_sidebar_width = 35
 
 " git-blame
 nnoremap <silent> <leader>gb <cmd>GitBlameToggle<cr>
+" git-diff
+nnoremap <silent> <leader>gdb <cmd>DiffviewFileHistory<cr>
+nnoremap <silent> <leader>gdf <cmd>DiffviewFileHistory %<cr>
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()

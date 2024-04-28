@@ -67,5 +67,13 @@ return require('packer').startup(function(use)
 
     use 'voldikss/vim-translator'
     use 'lewis6991/gitsigns.nvim'
+    use {
+        'ghillb/cybu.nvim',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+            'nvim-lua/plenary.nvim',
+        }
+    }
+    use "sindrets/diffview.nvim"
 end
 )

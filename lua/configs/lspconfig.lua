@@ -5,6 +5,9 @@ function M.config()
     require('lspconfig')['gopls'].setup {
         capabilities = capabilities
     }
+    require('lspconfig')['clangd'].setup {
+        capabilities = capabilities
+    }
     require('lspconfig')['lua_ls'].setup {
         capabilities = capabilities,
         settings = {
