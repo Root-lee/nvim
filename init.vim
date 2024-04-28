@@ -133,6 +133,7 @@ nmap <silent> <leader>nc <cmd>Vista ctags<cr>
 let g:vista_default_executive = 'ctags'
 let g:vista_executive_for = {
         \ 'c': 'nvim_lsp',
+        \ 'cpp': 'nvim_lsp',
         \ 'go': 'nvim_lsp',
         \ 'lua': 'nvim_lsp',
         \ }
