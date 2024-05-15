@@ -32,6 +32,11 @@ function M.config()
                 toggle_or_jump = '<CR>',
                 quit_in_show = { 'q', '<ESC>' },
             },
+        },
+        finder = {
+            keys = {
+                toggle_or_open = '<CR>'
+            }
         }
     })
 end

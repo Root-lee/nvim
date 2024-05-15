@@ -85,6 +85,9 @@ nnoremap <silent><c-]> :Lspsaga goto_definition<cr>
 nnoremap <silent> <leader>en :Lspsaga diagnostic_jump_next<cr>
 nnoremap <silent> <leader>ep :Lspsaga diagnostic_jump_prev<cr>
 
+" clangd switch between hpp and cpp
+nnoremap <silent> <leader>cc :ClangdSwitchSourceHeader<cr>
+
 " hop.nvim
 nnoremap <leader>sw :HopWord<cr>
 nnoremap <leader>ss :HopChar2<cr>
