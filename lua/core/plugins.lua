@@ -13,6 +13,7 @@ return require('packer').startup(function(use)
     use 'Lokaltog/vim-monotone'
     use 'chriskempson/base16-vim'
     use 'sainnhe/gruvbox-material'
+    use 'LunarVim/synthwave84.nvim'
 
     use {
         'nvim-tree/nvim-tree.lua',

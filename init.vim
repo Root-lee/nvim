@@ -39,6 +39,7 @@ autocmd BufReadPost *
 
 " ---colorful color---
 colorscheme everforest
+"colorscheme synthwave84
 "colorscheme tokyonight
 "colorscheme kanagawa
 "colorscheme monokai
