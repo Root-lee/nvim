@@ -8,6 +8,9 @@ function M.config()
     require('lspconfig')['clangd'].setup {
         capabilities = capabilities
     }
+    require('lspconfig')['denols'].setup {
+        capabilities = capabilities
+    }
     require('lspconfig')['lua_ls'].setup {
         capabilities = capabilities,
         settings = {

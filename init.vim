@@ -140,6 +140,7 @@ let g:vista_executive_for = {
         \ 'cpp': 'nvim_lsp',
         \ 'go': 'nvim_lsp',
         \ 'lua': 'nvim_lsp',
+        \ 'javascript': 'nvim_lsp',
         \ }
 let g:vista_sidebar_width = 35
 
