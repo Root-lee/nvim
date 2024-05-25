@@ -86,6 +86,9 @@ nnoremap <silent><c-]> :Lspsaga goto_definition<cr>
 nnoremap <silent> <leader>en :Lspsaga diagnostic_jump_next<cr>
 nnoremap <silent> <leader>ep :Lspsaga diagnostic_jump_prev<cr>
 
+" inlay hints
+nnoremap <silent> <leader>hh :lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>
+
 " clangd switch between hpp and cpp
 nnoremap <silent> <leader>cc :ClangdSwitchSourceHeader<cr>
 

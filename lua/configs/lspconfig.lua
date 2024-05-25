@@ -3,7 +3,20 @@ function M.config()
     -- Set up lspconfig.
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
     require('lspconfig')['gopls'].setup {
-        capabilities = capabilities
+        capabilities = capabilities,
+        settings = {
+            gopls = {
+                hints = {
+                    assignVariableTypes = true,
+                    compositeLiteralFields = true,
+                    compositeLiteralTypes = true,
+                    constantValues = true,
+                    functionTypeParameters = true,
+                    parameterNames = true,
+                    rangeVariableTypes = true,
+                },
+            },
+        },
     }
     require('lspconfig')['clangd'].setup {
         capabilities = capabilities
