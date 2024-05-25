@@ -76,5 +76,6 @@ return require('packer').startup(function(use)
         }
     }
     use "sindrets/diffview.nvim"
+    use "folke/ts-comments.nvim"
 end
 )
