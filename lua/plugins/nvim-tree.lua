@@ -1,6 +1,9 @@
-local M = {}
-function M.config()
-    require("nvim-tree").setup({
+return {
+    'nvim-tree/nvim-tree.lua',
+    dependencies = {
+        'nvim-tree/nvim-web-devicons',
+    },
+    opts = {
         sort_by = "case_sensitive",
         view = {
             width = 30,
@@ -11,7 +14,5 @@ function M.config()
         filters = {
             dotfiles = true,
         },
-    })
-end
-
-return M
+    }
+}

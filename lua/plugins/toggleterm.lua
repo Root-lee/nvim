@@ -1,12 +1,11 @@
-local M = {}
-function M.config()
-    require("toggleterm").setup{
+return { 
+    'akinsho/toggleterm.nvim',
+    version = '*',
+    opts = {
         direction = 'float',
         float_opts = {
             -- double, single, shadow, curved
             border = 'double'
         }
     }
-end
-
-return M
+}

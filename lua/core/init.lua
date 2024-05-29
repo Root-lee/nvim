@@ -25,28 +25,46 @@ vim.opt.formatoptions = ''
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require("configs.packer").config()
-require("core.plugins")
+vim.diagnostic.config({
+    virtual_text = false
+})
 
-require("configs.mason").config()
-require("configs.mason-lspconfig").config()
-require("configs.lspconfig").config()
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-require("configs.nvim-treesitter").config()
-require("configs.nvim-tree").config()
-require("configs.symbols-outline").config()
-require("configs.toggleterm").config()
-require("configs.git-blame").config()
-require("configs.null-ls").config()
-require("configs.bookmarks").config()
-require("configs.modes").config()
-require("configs.zoo").config()
-require("configs.lualine").config()
-require("configs.hop").config()
-require("configs.nvim-cmp").config()
-require("configs.interestingwords").config()
-require("configs.lspsaga").config()
-require("configs.gitsigns").config()
-require("configs.random-colorscheme").config()
-require("configs.cybu").config()
-require("configs.ts-comments").config()
+require("lazy").setup("plugins")
+
+--require("core.plugins")
+
+--require("configs.mason").config()
+--require("configs.mason-lspconfig").config()
+--require("configs.lspconfig").config()
+--
+--require("configs.nvim-treesitter").config()
+--require("configs.nvim-tree").config()
+--require("configs.symbols-outline").config()
+--require("configs.toggleterm").config()
+--require("configs.git-blame").config()
+--require("configs.null-ls").config()
+--require("configs.bookmarks").config()
+--require("configs.modes").config()
+--require("configs.zoo").config()
+--require("configs.lualine").config()
+--require("configs.hop").config()
+--require("configs.nvim-cmp").config()
+--require("configs.interestingwords").config()
+--require("configs.lspsaga").config()
+--require("configs.gitsigns").config()
+--require("configs.random-colorscheme").config()
+--require("configs.cybu").config()
+--require("configs.ts-comments").config()

@@ -38,7 +38,7 @@ autocmd BufReadPost *
       \ | endif
 
 " ---colorful color---
-colorscheme everforest
+"colorscheme everforest
 "colorscheme synthwave84
 "colorscheme tokyonight
 "colorscheme kanagawa
@@ -127,6 +127,11 @@ nnoremap <silent> <leader>tc <Cmd>BufferClose<CR>
 nnoremap <silent> <leader>to <Cmd>BufferCloseAllButCurrentOrPinned<CR>
 nnoremap <silent> <leader>ti <Cmd>BufferPin<CR>
 
+lua    vim.keymap.set("n", "K", "<Plug>(CybuPrev)")
+lua    vim.keymap.set("n", "J", "<Plug>(CybuNext)")
+lua    vim.keymap.set({ "n", "v" }, "<c-s-tab>", "<plug>(CybuLastusedPrev)")
+lua    vim.keymap.set({ "n", "v" }, "<c-tab>", "<plug>(CybuLastusedNext)")
+
 " ToggleTerm
 autocmd TermEnter term://*toggleterm#*
             \ tnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
@@ -158,5 +163,5 @@ set foldexpr=nvim_treesitter#foldexpr()
 set nofoldenable                     " Disable folding at startup.
 set foldlevel=9999
 
-lua require('core.init')
 set mouse =
+lua require('core.init')
