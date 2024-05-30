@@ -1,11 +1,7 @@
 return {
     'jose-elias-alvarez/null-ls.nvim',
     config = function() 
-        local status, null_ls = pcall(require, "null-ls")
-        if not status then
-            vim.notify("没有找到 null-ls")
-            return
-        end
+        null_ls = require("null-ls")
 
         local formatting = null_ls.builtins.formatting
         local diagnostics = null_ls.builtins.diagnostics
