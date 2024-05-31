@@ -1,5 +1,5 @@
 -- basics init
-vim.cmd('syntax on')
+-- vim.cmd('syntax on')
 vim.cmd('filetype plugin indent on')
 vim.opt.number = true
 -- vim.opt.relativenumber = true
@@ -13,7 +13,7 @@ if (vim.fn.has('termguicolors') == 1) then
 end
 
 -- Specify the behavior when switching between buffers
-vim.opt.switchbuf='useopen,usetab,newtab'
+vim.opt.switchbuf = 'useopen,usetab,newtab'
 vim.opt.stal = 2
 
 -- tabs
