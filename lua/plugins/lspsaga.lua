@@ -1,7 +1,6 @@
-
 return {
     {
-        'nvimdev/lspsaga.nvim',
+        "nvimdev/lspsaga.nvim",
         opts = {
             lightbulb = {
                 enable = false,
@@ -13,7 +12,7 @@ return {
             },
             diagnostic = {
                 show_code_action = true,
-                show_layout = 'float',
+                show_layout = "float",
                 show_normal_height = 10,
                 jump_num_shortcut = true,
                 max_width = 0.8,
@@ -26,17 +25,17 @@ return {
                 extend_relatedInformation = false,
                 diagnostic_only_current = true,
                 keys = {
-                    exec_action = 'o',
-                    quit = 'q',
-                    toggle_or_jump = '<CR>',
-                    quit_in_show = { 'q', '<ESC>' },
+                    exec_action = "o",
+                    quit = "q",
+                    toggle_or_jump = "<CR>",
+                    quit_in_show = { "q", "<ESC>" },
                 },
             },
             finder = {
                 keys = {
-                    toggle_or_open = '<CR>'
-                }
-            }
-        }
-    }
+                    toggle_or_open = "<CR>",
+                },
+            },
+        },
+    },
 }

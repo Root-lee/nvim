@@ -1,8 +1,8 @@
 return {
-    'ghillb/cybu.nvim',
+    "ghillb/cybu.nvim",
     dependencies = {
-        'nvim-tree/nvim-web-devicons',
-        'nvim-lua/plenary.nvim',
+        "nvim-tree/nvim-web-devicons",
+        "nvim-lua/plenary.nvim",
     },
-    opts = {}
+    opts = {},
 }

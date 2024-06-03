@@ -1,6 +1,6 @@
 return {
-    'mvllow/modes.nvim',
-    version = 'v0.2.0',
+    "mvllow/modes.nvim",
+    version = "v0.2.0",
     opts = {
         colors = {
             copy = "#f5c359",
@@ -24,6 +24,6 @@ return {
 
         -- Disable modes highlights in specified filetypes
         -- Please PR commonly ignored filetypes
-        ignore_filetypes = { 'NvimTree', 'TelescopePrompt' }
-    }
+        ignore_filetypes = { "NvimTree", "TelescopePrompt" },
+    },
 }

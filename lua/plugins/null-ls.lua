@@ -1,11 +1,11 @@
 return {
-    'jose-elias-alvarez/null-ls.nvim',
-    config = function() 
-        null_ls = require("null-ls")
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+        local null_ls = require("null-ls")
 
         local formatting = null_ls.builtins.formatting
         local diagnostics = null_ls.builtins.diagnostics
-        null_ls.setup {
+        null_ls.setup({
             debug = false,
             sources = {
                 formatting.stylua,
@@ -32,7 +32,9 @@ return {
                     prefer_local = "node_modules/.bin",
                 }),
             },
+
             on_attach = function(client, bufnr)
+                local augroup = vim.api.nvim_create_augroup("null-ls_auto_format", { clear = true })
                 if client.supports_method("textDocument/formatting") then
                     vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
                     vim.api.nvim_create_autocmd("BufWritePre", {
@@ -46,6 +48,6 @@ return {
                     })
                 end
             end,
-        }
-    end
+        })
+    end,
 }
