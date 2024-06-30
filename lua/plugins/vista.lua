@@ -8,6 +8,7 @@ return {
         \ 'go': 'nvim_lsp',
         \ 'lua': 'nvim_lsp',
         \ 'javascript': 'nvim_lsp',
+        \ 'java': 'nvim_lsp',
         \ }]])
         vim.cmd("let g:vista_sidebar_width = 35")
     end,

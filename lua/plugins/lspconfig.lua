@@ -2,6 +2,7 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
+        "nvim-java/nvim-java",
     },
     config = function()
         -- Set up lspconfig.
@@ -28,6 +29,7 @@ return {
         require("lspconfig")["denols"].setup({
             capabilities = capabilities,
         })
+        require("lspconfig").jdtls.setup({})
         require("lspconfig")["lua_ls"].setup({
             capabilities = capabilities,
             settings = {
@@ -38,6 +40,5 @@ return {
                 },
             },
         })
-        require("lspconfig").golangci_lint_ls.setup({})
     end,
 }

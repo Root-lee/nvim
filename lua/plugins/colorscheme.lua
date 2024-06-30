@@ -13,7 +13,7 @@ return {
     {
         "byounghoonkim/random-colorscheme.nvim",
         config = function()
-            vim.cmd([[colorscheme everforest]])
+            vim.cmd([[colorscheme gruvbox-material]])
             require("random-colorscheme").setup({
                 random_on_startup = false,
                 exclude_default_colorschems = true,
@@ -23,6 +23,8 @@ return {
                     "kanagawa",
                     "monokai",
                     "catppuccin",
+                    "gruvbox-material",
+                    "base16-ash",
                 },
                 show_current = true,
             })
