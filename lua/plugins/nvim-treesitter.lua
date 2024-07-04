@@ -34,9 +34,9 @@ return {
                 },
             },
             -- 启用基于Treesitter的代码格式化
-            indent = {
-                enable = true,
-            },
+            -- indent = {
+            --     enable = true,
+            -- },
         })
     end,
 }

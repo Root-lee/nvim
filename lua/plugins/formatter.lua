@@ -22,7 +22,7 @@ return {
                 go = {
                     require("formatter.filetypes.go").gofmt,
                     require("formatter.filetypes.go").goimports,
-                    --require("formatter.filetypes.go").goimports_reviser,
+                    require("formatter.filetypes.go").goimports_reviser,
                 },
                 c = {
                     require("formatter.filetypes.c").clangformat,
@@ -32,6 +32,9 @@ return {
                 },
                 java = {
                     require("formatter.filetypes.java").google_java_format,
+                },
+                json = {
+                    require("formatter.filetypes.json").jq,
                 },
                 -- Use the special "*" filetype for defining formatter configurations on
                 -- any filetype

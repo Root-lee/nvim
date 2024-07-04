@@ -5,8 +5,10 @@ return {
         "nvim-lua/plenary.nvim",
         "BurntSushi/ripgrep",
         "tomasky/bookmarks.nvim",
+        "ahmedkhalf/project.nvim",
     },
     config = function()
         require("telescope").load_extension("bookmarks")
+        require("telescope").load_extension("projects")
     end,
 }
