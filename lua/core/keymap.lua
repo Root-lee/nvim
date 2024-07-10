@@ -18,6 +18,12 @@ keymap("n", "<leader>cd", ":cd %:p:h<cr>:pwd<cr>", opts)
 keymap("n", "<leader>nn", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>nf", ":NvimTreeFindFile<cr>", opts)
 
+keymap("n", "<leader>y", '"+y', opts)
+keymap("v", "<leader>y", '"+y', opts)
+keymap("n", "<leader>p", '"+p', opts)
+keymap("n", "<leader>P", '"+P', opts)
+keymap("v", "<leader>p", '"+p', opts)
+
 -- Translate
 keymap("n", "<leader>tr", "<Plug>TranslateW", opts)
 keymap("v", "<leader>tr", "<Plug>TranslateWV", opts)

@@ -36,6 +36,9 @@ return {
                 json = {
                     require("formatter.filetypes.json").jq,
                 },
+                sh = {
+                    require("formatter.filetypes.sh").shfmt,
+                },
                 -- Use the special "*" filetype for defining formatter configurations on
                 -- any filetype
                 ["*"] = {
