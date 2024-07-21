@@ -2,13 +2,13 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
-        "nvim-java/nvim-java",
     },
     config = function()
         -- Set up lspconfig.
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
         require("lspconfig")["gopls"].setup({
             capabilities = capabilities,
+            root_dir = require("lspconfig").util.root_pattern(".git") or vim.fn.getcwd(),
             settings = {
                 gopls = {
                     hints = {
@@ -25,8 +25,12 @@ return {
         })
         require("lspconfig")["clangd"].setup({
             capabilities = capabilities,
+            --root_dir = require("lspconfig").util.root_pattern(".git") or vim.fn.getcwd(),
         })
         require("lspconfig")["denols"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["pyright"].setup({
             capabilities = capabilities,
         })
         require("lspconfig").jdtls.setup({})
