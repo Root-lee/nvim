@@ -44,6 +44,7 @@ keymap("n", "<c-]>", ":Lspsaga goto_definition<cr>", opts)
 -- nnoremap <silent> <leader>ep :lua vim.diagnostic.goto_prev()<cr>
 keymap("n", "<leader>en", ":Lspsaga diagnostic_jump_next<cr>", opts)
 keymap("n", "<leader>ep", ":Lspsaga diagnostic_jump_prev<cr>", opts)
+keymap("n", "<leader>ea", ":Lspsaga show_workspace_diagnostics ++float<cr>", opts)
 
 -- lspsaga outline
 keymap("n", "<leader>no", ":Lspsaga outline<cr>", opts)

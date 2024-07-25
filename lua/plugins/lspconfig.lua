@@ -25,7 +25,6 @@ return {
         })
         require("lspconfig")["clangd"].setup({
             capabilities = capabilities,
-            --root_dir = require("lspconfig").util.root_pattern(".git") or vim.fn.getcwd(),
         })
         require("lspconfig")["denols"].setup({
             capabilities = capabilities,
@@ -33,7 +32,6 @@ return {
         require("lspconfig")["pyright"].setup({
             capabilities = capabilities,
         })
-        require("lspconfig").jdtls.setup({})
         require("lspconfig")["lua_ls"].setup({
             capabilities = capabilities,
             settings = {

@@ -8,7 +8,6 @@ return {
     "Lokaltog/vim-monotone",
     "chriskempson/base16-vim",
     "sainnhe/gruvbox-material",
-    "LunarVim/synthwave84.nvim",
 
     {
         "byounghoonkim/random-colorscheme.nvim",
@@ -24,7 +23,6 @@ return {
                     "monokai",
                     "catppuccin",
                     "gruvbox-material",
-                    "base16-ash",
                 },
                 show_current = true,
             })
