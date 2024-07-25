@@ -31,7 +31,7 @@ return {
                     require("formatter.filetypes.cpp").clangformat,
                 },
                 java = {
-                    require("formatter.filetypes.java").google_java_format,
+                    require("formatter.filetypes.java").clangformat,
                 },
                 json = {
                     require("formatter.filetypes.json").jq,

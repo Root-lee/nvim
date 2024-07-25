@@ -32,6 +32,13 @@ return {
                     quit_in_show = { "q", "<ESC>" },
                 },
             },
+            outline = {
+                layout = "float",
+                keys = {
+                    toggle_or_jump = "<CR>",
+                    quit = "q",
+                },
+            },
             finder = {
                 keys = {
                     toggle_or_open = "<CR>",

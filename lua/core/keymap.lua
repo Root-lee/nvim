@@ -45,6 +45,9 @@ keymap("n", "<c-]>", ":Lspsaga goto_definition<cr>", opts)
 keymap("n", "<leader>en", ":Lspsaga diagnostic_jump_next<cr>", opts)
 keymap("n", "<leader>ep", ":Lspsaga diagnostic_jump_prev<cr>", opts)
 
+-- lspsaga outline
+keymap("n", "<leader>no", ":Lspsaga outline<cr>", opts)
+
 -- inlay hints
 keymap("n", "<leader>hh", ":lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())<cr>", opts)
 
