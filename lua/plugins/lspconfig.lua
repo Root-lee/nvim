@@ -5,8 +5,11 @@ return {
     },
     config = function()
         -- Set up lspconfig.
+        local lspconfig = require("lspconfig")
+        local configs = require("lspconfig.configs")
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
-        require("lspconfig")["gopls"].setup({
+
+        lspconfig["gopls"].setup({
             capabilities = capabilities,
             root_dir = require("lspconfig").util.root_pattern(".git") or vim.fn.getcwd(),
             settings = {
@@ -23,16 +26,16 @@ return {
                 },
             },
         })
-        require("lspconfig")["clangd"].setup({
+        lspconfig["clangd"].setup({
             capabilities = capabilities,
         })
-        require("lspconfig")["denols"].setup({
+        lspconfig["denols"].setup({
             capabilities = capabilities,
         })
-        require("lspconfig")["pyright"].setup({
+        lspconfig["pyright"].setup({
             capabilities = capabilities,
         })
-        require("lspconfig")["lua_ls"].setup({
+        lspconfig["lua_ls"].setup({
             capabilities = capabilities,
             settings = {
                 Lua = {
@@ -41,6 +44,29 @@ return {
                     },
                 },
             },
+        })
+        if not configs.golangcilsp then
+            configs.golangcilsp = {
+                default_config = {
+                    cmd = { "golangci-lint-langserver" },
+                    root_dir = lspconfig.util.root_pattern(".git", "go.mod"),
+                    init_options = {
+                        command = {
+                            "golangci-lint",
+                            "run",
+                            "--enable-all",
+                            "--disable",
+                            "lll",
+                            "--out-format",
+                            "json",
+                            "--issues-exit-code=1",
+                        },
+                    },
+                },
+            }
+        end
+        lspconfig.golangci_lint_ls.setup({
+            filetypes = { "go", "gomod" },
         })
     end,
 }

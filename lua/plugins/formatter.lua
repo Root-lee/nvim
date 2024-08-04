@@ -39,6 +39,9 @@ return {
                 sh = {
                     require("formatter.filetypes.sh").shfmt,
                 },
+                proto = {
+                    require("formatter.filetypes.proto").buf_format,
+                },
                 -- Use the special "*" filetype for defining formatter configurations on
                 -- any filetype
                 ["*"] = {

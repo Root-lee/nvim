@@ -6,9 +6,6 @@ path.data_dir = vim.fn.stdpath("cache") .. "/nvim-jdtls"
 path.java_agent = jdtls_install .. "/lombok.jar"
 path.launcher_jar = vim.fn.glob(jdtls_install .. "/plugins/org.eclipse.equinox.launcher_*.jar")
 
--- disable diagnostic Fix Later
-vim.diagnostic.disable()
-
 if vim.fn.has("mac") == 1 then
 	path.platform_config = jdtls_install .. "/config_mac"
 	path.jdk_homes = "$HOME/.sdkman/candidates/java/"
