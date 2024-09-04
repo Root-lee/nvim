@@ -30,8 +30,8 @@ return {
                 cpp = {
                     require("formatter.filetypes.cpp").clangformat,
                 },
-                java = {
-                    require("formatter.filetypes.java").clangformat,
+                rust = {
+                    require("formatter.filetypes.rust").rustfmt,
                 },
                 json = {
                     require("formatter.filetypes.json").jq,

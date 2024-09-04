@@ -35,6 +35,19 @@ return {
         lspconfig["pyright"].setup({
             capabilities = capabilities,
         })
+        lspconfig["rust_analyzer"].setup({
+            capabilities = capabilities,
+            settings = {
+                ["rust-analyzer"] = {
+                    check = {
+                        command = "clippy",
+                    },
+                    diagnostics = {
+                        enable = true,
+                    },
+                },
+            },
+        })
         lspconfig["lua_ls"].setup({
             capabilities = capabilities,
             settings = {
