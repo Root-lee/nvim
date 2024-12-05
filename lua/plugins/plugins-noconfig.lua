@@ -4,4 +4,6 @@ return {
     "yegappan/mru",
     "jiangmiao/auto-pairs",
     "sindrets/diffview.nvim",
+    { "nvchad/volt", lazy = true },
+    { "nvchad/menu", lazy = true },
 }

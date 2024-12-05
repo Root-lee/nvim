@@ -37,6 +37,7 @@ keymap("v", "<leader>tr", "<Plug>TranslateWV", opts)
 keymap("n", "gd", ":Lspsaga peek_definition<cr>", opts)
 keymap("n", "gi", ":Lspsaga finder<cr>", opts)
 keymap("n", "gr", ":Lspsaga finder<cr>", opts)
+keymap("n", "gn", ":Lspsaga rename<cr>", opts)
 keymap("n", "<c-]>", ":Lspsaga goto_definition<cr>", opts)
 
 -- jump to next diagnostic
@@ -106,3 +107,18 @@ keymap("n", "<leader>gb", "<cmd>GitBlameToggle<cr>", opts)
 -- git-diff
 keymap("n", "<leader>gdb", "<cmd>DiffviewFileHistory<cr>", opts)
 keymap("n", "<leader>gdf", "<cmd>DiffviewFileHistory %<cr>", opts)
+
+-- mark-view
+keymap("n", "<leader>mv", "<cmd>Markview toggleAll<cr>", opts)
+
+-- menu
+vim.keymap.set("n", "<leader><leader>", function()
+    local options = vim.bo.ft == "NvimTree" and "nvimtree" or "default"
+    require("menu").open(options)
+end, {})
+vim.keymap.set("n", "<leader>l<leader>", function()
+    require("menu").open("lsp")
+end, {})
+vim.keymap.set("n", "<leader>g<leader>", function()
+    require("menu").open("gitsigns")
+end, {})

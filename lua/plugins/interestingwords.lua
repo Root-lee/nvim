@@ -18,6 +18,8 @@ return {
             search_count = true,
             navigation = true,
             scroll_center = false,
+            search_key = "<leader>mmmmmm",
+            cancel_search_key = "<leader>MMMMMM",
             color_key = "<leader>k",
             cancel_color_key = "<leader>K",
         })

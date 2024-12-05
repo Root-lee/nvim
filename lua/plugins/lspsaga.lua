@@ -40,6 +40,10 @@ return {
                 },
             },
             finder = {
+                default = "def+ref+imp",
+                max_height = 0.7,
+                left_width = 0.4,
+                right_width = 0.4,
                 keys = {
                     toggle_or_open = "<CR>",
                 },
